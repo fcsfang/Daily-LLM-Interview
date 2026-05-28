@@ -41,6 +41,29 @@ python run_daily.py
 - `OPENAI_API_KEY`
 - 可选：`TAVILY_API_KEY` 或 `BRAVE_SEARCH_API_KEY`
 
+生成完成后可以自动推送到邮箱。需要继续在 GitHub Secrets 中配置：
+
+- `SMTP_HOST`，例如 `smtp.gmail.com`、`smtp.qq.com`
+- `SMTP_PORT`，通常是 `587`
+- `SMTP_USERNAME`
+- `SMTP_PASSWORD`，建议使用邮箱服务商生成的应用专用密码或授权码
+- `MAIL_TO`，收件邮箱，多个地址用英文逗号分隔
+- 可选：`MAIL_FROM`，不填则使用 `SMTP_USERNAME`
+- 可选：`SMTP_USE_TLS`，默认 `true`
+
+也支持一个通用 Webhook 通道：
+
+- `DIGEST_WEBHOOK_URL`
+
+Webhook 会收到 JSON：
+
+```json
+{
+  "title": "Daily LLM Interview Digest - 2026-05-28",
+  "content": "日报 Markdown 正文"
+}
+```
+
 ## 本地 macOS 定时
 
 也可以使用 launchd：
@@ -50,4 +73,3 @@ bash scripts/install_launchd.sh
 ```
 
 默认每天本地时间 08:00 运行，并把日志写入 `outputs/launchd.log`。
-
