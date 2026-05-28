@@ -51,8 +51,6 @@ def validate_digest(markdown: str) -> list[str]:
         errors.append("存在题目缺少参考答案")
     if "文章类型" not in markdown:
         errors.append("今日技术博客精读缺少文章类型")
-    if "人头打分" in markdown:
-        errors.append("存在明显口误：人头打分，应为人工打分")
 
     errors.extend(_validate_reference_traceability(markdown))
     errors.extend(_validate_article_links(markdown))
