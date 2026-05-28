@@ -145,7 +145,7 @@ def extract_tasks(markdown: str) -> list[str]:
             capture = True
             tasks.append(stripped.lstrip("# ").strip())
             continue
-        if stripped.startswith(("### 算法题", "### 大模型理论题", "### 项目任务")):
+        if stripped.startswith(("### 大模型理论题", "### 大模型理论追问题", "### 项目任务", "### 项目表达任务")):
             tasks.append(stripped.lstrip("# ").strip())
             continue
         if capture and stripped.startswith("## "):

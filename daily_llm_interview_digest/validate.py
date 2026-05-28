@@ -8,7 +8,7 @@ REQUIRED_SECTIONS = [
     "## 1. 今日面试真题精讲",
     "## 2. 今日技术博客精读",
     "## 3. 今日必背问答卡片",
-    "## 4. 今日练习任务",
+    "## 4. 今日面试专项训练",
     "## 5. 今日 60 秒背诵版",
     "## 6. 今日参考资料",
 ]
@@ -45,12 +45,14 @@ def validate_digest(markdown: str) -> list[str]:
     if card_count < 5:
         errors.append("必背问答卡片少于 5 个")
 
-    if "参考代码" not in markdown and "Python 参考代码" not in markdown:
-        errors.append("今日练习任务缺少算法题参考代码")
     if "参考答案" not in markdown:
         errors.append("存在题目缺少参考答案")
     if "文章类型" not in markdown:
         errors.append("今日技术博客精读缺少文章类型")
+    if "### 4.1 大模型理论追问题" not in markdown:
+        errors.append("今日面试专项训练缺少大模型理论追问题")
+    if "### 4.2 项目表达任务" not in markdown:
+        errors.append("今日面试专项训练缺少项目表达任务")
 
     errors.extend(_validate_reference_traceability(markdown))
     errors.extend(_validate_article_links(markdown))
