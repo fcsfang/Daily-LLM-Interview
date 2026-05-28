@@ -83,6 +83,20 @@ python run_daily.py
 - `MAIL_TO`，收件邮箱，多个地址用英文逗号分隔
 - 可选：`MAIL_FROM`，不填则使用 `SMTP_USERNAME`
 - 可选：`SMTP_USE_TLS`，默认 `true`
+- 可选：`SMTP_USE_SSL`，默认 `false`
+
+163 邮箱推荐配置：
+
+```text
+SMTP_HOST=smtp.163.com
+SMTP_PORT=465
+SMTP_USERNAME=你的完整 163 邮箱
+SMTP_PASSWORD=你的 163 授权码
+MAIL_FROM=你的完整 163 邮箱
+MAIL_TO=接收日报的邮箱
+SMTP_USE_SSL=true
+SMTP_USE_TLS=false
+```
 
 也支持一个通用 Webhook 通道：
 

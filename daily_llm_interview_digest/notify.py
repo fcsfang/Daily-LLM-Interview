@@ -45,13 +45,21 @@ def _send_email(subject: str, body: str) -> None:
     message["To"] = ", ".join(recipients)
     message.set_content(body)
 
-    with smtplib.SMTP(host, port, timeout=30) as smtp:
+    smtp_class = smtplib.SMTP_SSL if _env_flag("SMTP_USE_SSL") else smtplib.SMTP
+    with smtp_class(host, port, timeout=30) as smtp:
         smtp.ehlo()
-        if os.getenv("SMTP_USE_TLS", "true").lower() in {"1", "true", "yes"}:
+        if not _env_flag("SMTP_USE_SSL") and _env_flag("SMTP_USE_TLS", default=True):
             smtp.starttls()
             smtp.ehlo()
         smtp.login(username, password)
         smtp.send_message(message)
+
+
+def _env_flag(name: str, *, default: bool = False) -> bool:
+    value = os.getenv(name)
+    if value is None:
+        return default
+    return value.lower() in {"1", "true", "yes", "on"}
 
 
 def _send_webhook(webhook_url: str, subject: str, body: str) -> None:
@@ -61,4 +69,3 @@ def _send_webhook(webhook_url: str, subject: str, body: str) -> None:
         timeout=30,
     )
     response.raise_for_status()
-
