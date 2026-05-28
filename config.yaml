@@ -1,0 +1,39 @@
+language: zh-CN
+timezone: Asia/Shanghai
+output_dir: outputs
+max_sources: 18
+model: gpt-4.1-mini
+
+student_profile:
+  stage: 计算机研一
+  goal: 找大模型实习
+  target_directions:
+    - LLM 应用
+    - RAG
+    - Agent
+    - LoRA 微调
+    - 模型评测
+    - 模型部署
+
+search:
+  queries:
+    - 大模型 实习 面经 RAG Agent LoRA 面试题
+    - LLM intern interview questions RAG agent LoRA evaluation deployment
+    - 大模型 应用开发 面试题 RAG 检索增强生成
+    - 大模型 实习 JD RAG Agent 模型评测 部署
+    - LLM 技术博客 RAG Agent LoRA fine-tuning evaluation
+  trusted_domains:
+    - huggingface.co
+    - openai.com
+    - anthropic.com
+    - langchain.com
+    - llamaindex.ai
+    - arxiv.org
+    - paperswithcode.com
+    - microsoft.com
+    - cloud.google.com
+    - aws.amazon.com
+
+schedule:
+  default_local_time: "08:00"
+

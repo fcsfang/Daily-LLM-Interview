@@ -1,0 +1,20 @@
+[project]
+name = "daily-llm-interview-digest"
+version = "0.1.0"
+description = "Daily Chinese LLM internship interview digest generator."
+requires-python = ">=3.10"
+dependencies = [
+  "beautifulsoup4>=4.12.0",
+  "openai>=1.30.0",
+  "PyYAML>=6.0.1",
+  "requests>=2.31.0",
+]
+
+[project.scripts]
+llm-interview-digest = "daily_llm_interview_digest.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["daily_llm_interview_digest*"]
+
+[tool.ruff]
+line-length = 100
