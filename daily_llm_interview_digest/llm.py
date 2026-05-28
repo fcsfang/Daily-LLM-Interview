@@ -70,6 +70,12 @@ def _model(config: dict) -> str:
 def build_prompt(context: DigestContext) -> str:
     profile = context.config.get("student_profile", {})
     directions = "、".join(profile.get("target_directions", []))
+    learning_context = context.learning_context or {}
+    theme = learning_context.get("theme", {})
+    recent_questions = learning_context.get("recent_questions", [])
+    recent_keywords = learning_context.get("recent_keywords", [])
+    recent_tasks = learning_context.get("recent_tasks", [])
+    blog_mix = learning_context.get("blog_mix", ["工程实践", "理论/论文", "岗位 JD 或面经"])
     source_blocks = []
     for index, source in enumerate(context.sources, start=1):
         uncertain = "，需进一步验证" if source.uncertain else ""
@@ -90,6 +96,22 @@ def build_prompt(context: DigestContext) -> str:
 - 目标：{profile.get("goal", "找大模型相关实习")}
 - 重点方向：{directions or "LLM 应用、RAG、Agent、LoRA 微调、模型评测、模型部署"}
 - 当前项目背景：读者正在准备大模型相关实习，希望用每日推送积累面试表达、技术理解和项目实践能力。
+
+今日主题轮换：
+- 今日主主题：{theme.get("name", "综合复盘")}
+- 今日重点角度：{theme.get("focus", "跨模块综合题、项目讲述、追问串联")}
+- 今天至少 2 道真题、1 个练习任务、1 个 60 秒背诵版要明显贴合今日主题。
+
+最近 7 天避免重复清单：
+- 已讲过的问题：{_format_list(recent_questions, "暂无")}
+- 已覆盖关键词：{_format_list(recent_keywords, "暂无")}
+- 已布置任务：{_format_list(recent_tasks, "暂无")}
+
+去重要求：
+1. 不要重复最近 7 天已经讲过的问题标题、问法和练习任务。
+2. 如果某个高频知识点必须重复，必须换角度，例如从“概念解释”换成“工程排查 / 评测设计 / 部署优化 / 项目追问”。
+3. 今日重点中必须写清楚“今天新增的角度”，不要只复述旧内容。
+4. 必背卡片可以复习旧关键词，但至少 3 张卡片必须引入新角度或新追问。
 
 生成原则：
 1. 不是新闻摘要，而是“面试训练包”。
@@ -143,10 +165,12 @@ def build_prompt(context: DigestContext) -> str:
 列出 3-6 个关键词。
 
 ## 2. 今日技术博客精读
-筛选 2-3 篇最值得读的资料。每篇必须包含：
+筛选 2-3 篇最值得读的资料，并尽量覆盖这些用途：{_format_list(blog_mix, "工程实践、理论/论文、岗位 JD 或面经")}。
+每篇必须标注它属于哪一类用途，避免每天只选同一种文章。每篇必须包含：
 - 文章标题
 - 链接
 - 来源依据
+- 文章类型：工程实践 / 理论或论文 / 岗位 JD 或面经
 - 核心内容总结：3-5 条 bullet
 - 对面试有什么用
 - 可转化面试题：1-2 道
@@ -184,6 +208,12 @@ def build_prompt(context: DigestContext) -> str:
 当天搜索资料：
 {source_text}
 """.strip()
+
+
+def _format_list(items: list[str], empty: str) -> str:
+    if not items:
+        return empty
+    return "；".join(items)
 
 
 def _generate_fallback_digest(context: DigestContext) -> str:

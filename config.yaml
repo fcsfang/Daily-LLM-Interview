@@ -4,6 +4,15 @@ output_dir: outputs
 max_sources: 18
 model: deepseek-v4-flash
 
+history:
+  lookback_days: 7
+
+content_policy:
+  blog_mix:
+    - 工程实践
+    - 理论/论文
+    - 岗位 JD 或面经
+
 student_profile:
   stage: 计算机研一
   goal: 找大模型实习

@@ -46,5 +46,7 @@ def validate_digest(markdown: str) -> list[str]:
         errors.append("今日练习任务缺少算法题参考代码")
     if "参考答案" not in markdown:
         errors.append("存在题目缺少参考答案")
+    if "文章类型" not in markdown:
+        errors.append("今日技术博客精读缺少文章类型")
 
     return errors

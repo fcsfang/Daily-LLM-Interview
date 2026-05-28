@@ -27,4 +27,4 @@ class DigestContext:
     run_date: date
     sources: list[SourceDocument] = field(default_factory=list)
     config: dict = field(default_factory=dict)
-
+    learning_context: dict = field(default_factory=dict)
