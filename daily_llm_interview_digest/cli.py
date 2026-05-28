@@ -5,6 +5,7 @@ from datetime import date
 
 from .config import load_config
 from .digest import run
+from .env import load_dotenv
 from .notify import notify
 
 
@@ -15,6 +16,7 @@ def main() -> None:
     parser.add_argument("--notify", action="store_true", help="Send digest through configured channels.")
     args = parser.parse_args()
 
+    load_dotenv()
     config = load_config(args.config)
     run_date = date.fromisoformat(args.date) if args.date else None
     output_path = run(config=config, run_date=run_date)
