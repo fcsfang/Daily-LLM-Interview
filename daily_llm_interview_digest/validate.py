@@ -51,8 +51,8 @@ def validate_digest(markdown: str) -> list[str]:
         errors.append("今日技术博客精读缺少文章类型")
     if "### 4.1 大模型理论追问题" not in markdown:
         errors.append("今日面试专项训练缺少大模型理论追问题")
-    if "### 4.2 项目表达任务" not in markdown:
-        errors.append("今日面试专项训练缺少项目表达任务")
+    if "### 4.2 项目表达任务" in markdown or "### 项目任务" in markdown:
+        errors.append("今日面试专项训练不应包含项目任务")
 
     errors.extend(_validate_reference_traceability(markdown))
     errors.extend(_validate_article_links(markdown))
