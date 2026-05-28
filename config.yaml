@@ -2,7 +2,7 @@ language: zh-CN
 timezone: Asia/Shanghai
 output_dir: outputs
 max_sources: 18
-model: gpt-4.1-mini
+model: deepseek-v4-flash
 
 student_profile:
   stage: 计算机研一
@@ -36,4 +36,3 @@ search:
 
 schedule:
   default_local_time: "08:00"
-

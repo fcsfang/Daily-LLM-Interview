@@ -8,17 +8,22 @@ from .models import DigestContext
 
 
 def generate_digest(context: DigestContext) -> str:
-    if os.getenv("OPENAI_API_KEY"):
+    if _api_key():
         return _generate_with_openai(context)
     return _generate_fallback_digest(context)
 
 
 def _generate_with_openai(context: DigestContext) -> str:
-    client = OpenAI()
     config = context.config
+    client_kwargs = {"api_key": _api_key()}
+    base_url = _base_url()
+    if base_url:
+        client_kwargs["base_url"] = base_url
+
+    client = OpenAI(**client_kwargs)
     prompt = build_prompt(context)
     response = client.chat.completions.create(
-        model=config.get("model", "gpt-4.1-mini"),
+        model=_model(config),
         temperature=0.35,
         messages=[
             {
@@ -32,6 +37,22 @@ def _generate_with_openai(context: DigestContext) -> str:
         ],
     )
     return response.choices[0].message.content or ""
+
+
+def _api_key() -> str | None:
+    return os.getenv("DEEPSEEK_API_KEY") or os.getenv("OPENAI_API_KEY")
+
+
+def _base_url() -> str | None:
+    if os.getenv("DEEPSEEK_API_KEY"):
+        return os.getenv("DEEPSEEK_BASE_URL", "https://api.deepseek.com")
+    return os.getenv("OPENAI_BASE_URL")
+
+
+def _model(config: dict) -> str:
+    if os.getenv("DEEPSEEK_API_KEY"):
+        return os.getenv("DEEPSEEK_MODEL") or os.getenv("LLM_MODEL") or config.get("model", "deepseek-v4-flash")
+    return os.getenv("OPENAI_MODEL") or os.getenv("LLM_MODEL") or config.get("model", "gpt-4.1-mini")
 
 
 def build_prompt(context: DigestContext) -> str:
@@ -223,4 +244,3 @@ def top_k_frequent(nums: list[int], k: int) -> list[int]:
 ### 项目任务：给 RAG 项目加一套最小评测闭环
 今天完成 20 条 query 的小评测集，每条包含问题、标准答案、支持文档片段。跑当前 RAG，记录 top-5 是否命中证据、答案是否引用证据、是否出现幻觉。把失败 case 分成召回失败、重排失败、生成失败三类，明天针对最多的一类优化。
 """
-

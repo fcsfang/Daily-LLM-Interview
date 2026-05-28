@@ -21,7 +21,32 @@ python run_daily.py
 
 生成结果会写入 `outputs/YYYY-MM-DD.md`。
 
-没有 `OPENAI_API_KEY` 时，脚本仍会生成一份结构完整的保底日报，并对来源不确定内容标注“需进一步验证”。建议配置模型 API，以获得更贴近当天搜索结果的答案。
+没有模型 API key 时，脚本仍会生成一份结构完整的保底日报，并对来源不确定内容标注“需进一步验证”。建议配置模型 API，以获得更贴近当天搜索结果的答案。
+
+## DeepSeek API 配置
+
+本项目支持 DeepSeek 的 OpenAI-compatible API。GitHub Actions Secrets 中至少配置：
+
+- `DEEPSEEK_API_KEY`
+
+可选配置：
+
+- `DEEPSEEK_BASE_URL`，默认 `https://api.deepseek.com`
+- `DEEPSEEK_MODEL`，默认使用 `config.yaml` 中的 `deepseek-v4-flash`
+
+如果你想使用更强的模型，可以设置：
+
+```text
+DEEPSEEK_MODEL=deepseek-v4-pro
+```
+
+本地运行示例：
+
+```bash
+export DEEPSEEK_API_KEY="你的 DeepSeek key"
+export DEEPSEEK_MODEL="deepseek-v4-flash"
+python run_daily.py
+```
 
 ## 搜索配置
 
@@ -36,9 +61,17 @@ python run_daily.py
 
 ## GitHub Actions 定时
 
-仓库已包含 `.github/workflows/daily.yml`，默认每天北京时间 08:00 运行。需要在 GitHub Secrets 中配置：
+仓库已包含 `.github/workflows/daily.yml`，默认每天北京时间 08:00 运行。使用 DeepSeek 时需要在 GitHub Secrets 中配置：
+
+- `DEEPSEEK_API_KEY`
+- 可选：`DEEPSEEK_MODEL`
+- 可选：`DEEPSEEK_BASE_URL`
+
+如果使用 OpenAI，则配置：
 
 - `OPENAI_API_KEY`
+- 可选：`OPENAI_MODEL`
+- 可选：`OPENAI_BASE_URL`
 - 可选：`TAVILY_API_KEY` 或 `BRAVE_SEARCH_API_KEY`
 
 生成完成后可以自动推送到邮箱。需要继续在 GitHub Secrets 中配置：
