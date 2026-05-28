@@ -9,7 +9,6 @@ REQUIRED_SECTIONS = [
     "## 2. 今日技术博客精读",
     "## 3. 今日必背问答卡片",
     "## 4. 今日面试专项训练",
-    "## 5. 今日参考资料",
 ]
 
 REQUIRED_QUESTION_FIELDS = [
@@ -53,19 +52,16 @@ def validate_digest(markdown: str) -> list[str]:
     if "### 4.2 项目表达任务" in markdown or "### 项目任务" in markdown:
         errors.append("今日面试专项训练不应包含项目任务")
 
-    errors.extend(_validate_reference_traceability(markdown))
+    errors.extend(_validate_no_numbered_reference_only(markdown))
     errors.extend(_validate_article_links(markdown))
 
     return errors
 
 
-def _validate_reference_traceability(markdown: str) -> list[str]:
+def _validate_no_numbered_reference_only(markdown: str) -> list[str]:
     errors: list[str] = []
-    used_refs = set(re.findall(r"参考资料\s*\[(\d+)\]", markdown))
-    listed_refs = set(re.findall(r"^-\s*\[(\d+)\]", markdown, flags=re.MULTILINE))
-    missing_refs = sorted(used_refs - listed_refs, key=int)
-    if missing_refs:
-        errors.append(f"参考资料编号不可追溯：{', '.join(f'[{item}]' for item in missing_refs)}")
+    if re.search(r"(参考资料|资料)\s*\[\d+\]", markdown):
+        errors.append("参考资料应在使用处直接写标题和链接，不要只写编号引用")
     return errors
 
 
