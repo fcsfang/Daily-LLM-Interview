@@ -45,10 +45,11 @@ def _send_email(subject: str, body: str) -> None:
     message["To"] = ", ".join(recipients)
     message.set_content(body)
 
-    smtp_class = smtplib.SMTP_SSL if _env_flag("SMTP_USE_SSL") else smtplib.SMTP
+    use_ssl = _env_flag("SMTP_USE_SSL", default=port == 465)
+    smtp_class = smtplib.SMTP_SSL if use_ssl else smtplib.SMTP
     with smtp_class(host, port, timeout=30) as smtp:
         smtp.ehlo()
-        if not _env_flag("SMTP_USE_SSL") and _env_flag("SMTP_USE_TLS", default=True):
+        if not use_ssl and _env_flag("SMTP_USE_TLS", default=True):
             smtp.starttls()
             smtp.ehlo()
         smtp.login(username, password)
