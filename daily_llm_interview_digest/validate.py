@@ -7,16 +7,18 @@ REQUIRED_SECTIONS = [
     "## 2. 今日技术博客精读",
     "## 3. 今日必背问答卡片",
     "## 4. 今日练习任务",
+    "## 5. 今日 60 秒背诵版",
 ]
 
 REQUIRED_QUESTION_FIELDS = [
-    "### 问题",
-    "### 考察点",
-    "### 面试口头版回答",
-    "### 深入版回答",
-    "### 常见追问",
-    "### 项目联系",
-    "### 记忆关键词",
+    "**来源依据：**",
+    "**可信度：**",
+    "**考察点：**",
+    "**面试口头版回答：**",
+    "**深入理解版回答：**",
+    "**常见追问与回答：**",
+    "**项目联系：**",
+    "**记忆关键词：**",
 ]
 
 
@@ -26,7 +28,7 @@ def validate_digest(markdown: str) -> list[str]:
         if section not in markdown:
             errors.append(f"缺少必要结构：{section}")
 
-    question_count = markdown.count("### 问题")
+    question_count = markdown.count("### 题目")
     if question_count < 3:
         errors.append("今日面试真题精讲少于 3 道题")
     if question_count > 5:
@@ -40,10 +42,9 @@ def validate_digest(markdown: str) -> list[str]:
     if card_count < 5:
         errors.append("必背问答卡片少于 5 个")
 
-    if "参考代码" not in markdown:
+    if "参考代码" not in markdown and "Python 参考代码" not in markdown:
         errors.append("今日练习任务缺少算法题参考代码")
     if "参考答案" not in markdown:
         errors.append("存在题目缺少参考答案")
 
     return errors
-
