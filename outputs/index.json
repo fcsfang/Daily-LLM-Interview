@@ -1,3 +1,47 @@
 {
-  "entries": []
+  "entries": [
+    {
+      "date": "2026-05-29",
+      "file": "2026-05-29.md",
+      "theme": "模型部署 / 推理优化",
+      "questions": [
+        "请详细解释 KV cache 是什么？为什么能极大提升推理速度？实际部署中显存如何估算？",
+        "如果对模型进行 INT4 量化后，发现回答质量明显下降，你会如何做精度补偿？",
+        "在高并发推理服务中，如何优化系统的吞吐和延迟？请谈谈 dynamic batching、Continuous batching 和 PagedAttention 的原理"
+      ],
+      "keywords": [
+        "KV cache",
+        "自回归",
+        "显存计算",
+        "GQA",
+        "PagedAttention",
+        "vLLM",
+        "FlashAttention",
+        "INT4",
+        "AWQ",
+        "GPTQ",
+        "QLoRA",
+        "NF4",
+        "混合精度量化",
+        "SmoothQuant",
+        "Dynamic batching",
+        "Continuous batching",
+        "吞吐",
+        "延迟",
+        "显存碎片",
+        "#模型部署",
+        "#推理优化",
+        "#LoRA",
+        "#量化",
+        "#QLoRA",
+        "#吞吐",
+        "#精度补偿",
+        "#vLLM",
+        "#PagedAttention"
+      ],
+      "tasks": [
+        "4.1 大模型理论追问题"
+      ]
+    }
+  ]
 }
