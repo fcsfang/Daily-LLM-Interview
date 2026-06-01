@@ -113,6 +113,69 @@
       "tasks": [
         "4.1 大模型理论追问题"
       ]
+    },
+    {
+      "date": "2026-06-01",
+      "file": "2026-06-01.md",
+      "theme": "RAG",
+      "questions": [
+        "RAG系统与传统语言模型在知识更新方式上有哪些根本区别？",
+        "RAG系统中检索失败或检索质量差时，你会如何设计和排查优化？",
+        "RAG系统如何评测？你会从哪些维度确保系统质量？",
+        "RAG系统中如何设计引用机制来提升可信度和促进纠错？",
+        "在RAG系统中，如何解决“Lost in the Middle”问题？"
+      ],
+      "keywords": [
+        "知识解耦",
+        "两阶段推理",
+        "热更新",
+        "封闭域阅读",
+        "RAG优先策略",
+        "文档时效性",
+        "chunk策略",
+        "混合检索",
+        "rerank",
+        "双编码器",
+        "交叉编码器",
+        "Metadata过滤",
+        "语义截断",
+        "RAG评测",
+        "Faithfulness",
+        "Recall@k",
+        "LLM-as-Judge",
+        "RAGAS",
+        "对抗性评测",
+        "评测自动化",
+        "引用溯源",
+        "prompt强制引用",
+        "NLI校验",
+        "faithfulness",
+        "可审核性",
+        "source badge",
+        "Lost in the Middle",
+        "U型注意力",
+        "上下文组织",
+        "压缩策略",
+        "排序优化",
+        "结构化prompt",
+        "#RAG",
+        "#chunk",
+        "#检索优化",
+        "#评测",
+        "#Faithfulness",
+        "#NLI",
+        "#微调",
+        "#工程选型",
+        "#RAG-first",
+        "#query增强",
+        "#HyDE",
+        "#Agent",
+        "#AgenticRAG",
+        "#高级RAG"
+      ],
+      "tasks": [
+        "4.1 大模型理论追问题"
+      ]
     }
   ]
 }
