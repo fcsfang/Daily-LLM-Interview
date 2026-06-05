@@ -218,6 +218,60 @@
       "tasks": [
         "4.1 大模型理论追问题"
       ]
+    },
+    {
+      "date": "2026-06-05",
+      "file": "2026-06-05.md",
+      "theme": "模型部署 / 推理优化",
+      "questions": [
+        "请谈谈如何优化大模型推理的延迟和吞吐量？可以从量化、KV cache、batch等角度展开",
+        "LoRA微调后的模型在部署时如何实现零额外延迟？请说明工程实现上的关键步骤",
+        "请解释大模型推理时KV cache的作用以及其在长序列场景下的优化策略有哪些？结合Continuous batching说明",
+        "请比较离线评测（Offline Evaluation）和在线监控（Online Monitoring）在大模型部署中的作用和差异",
+        "在部署大模型服务时，如何平衡成本、延迟和吞吐？请谈谈你的工程经验"
+      ],
+      "keywords": [
+        "量化 (PTQ/QAT)",
+        "KV cache",
+        "PagedAttention",
+        "Continuous batching",
+        "TTFT",
+        "吞吐-延迟权衡",
+        "LoRA合并",
+        "merge_and_unload",
+        "零开销推理",
+        "多adapter切换",
+        "TensorRT-LLM lora plugin",
+        "GQA/MQA",
+        "Cache Blending",
+        "显存碎片",
+        "离线评测",
+        "在线监控",
+        "回归测试",
+        "LLM-as-Judge",
+        "告警",
+        "采样",
+        "模型选型",
+        "缓存",
+        "弹性伸缩",
+        "成本模型",
+        "级联路由",
+        "#模型部署",
+        "#量化",
+        "#推理优化",
+        "#KV",
+        "#PagedAttention",
+        "#vLLM",
+        "#LoRA",
+        "#batching",
+        "#吞吐优化",
+        "#模型评测",
+        "#部署",
+        "#稳定性"
+      ],
+      "tasks": [
+        "4.1 大模型理论追问题"
+      ]
     }
   ]
 }
