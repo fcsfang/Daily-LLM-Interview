@@ -535,6 +535,42 @@
       "tasks": [
         "4.1 大模型理论追问题：LoRA 的秩 r 选择对微调效果有什么影响？如何确定最优 r？"
       ]
+    },
+    {
+      "date": "2026-06-11",
+      "file": "2026-06-11.md",
+      "theme": "模型评测",
+      "questions": [
+        "如何全面评估一个 RAG 系统的性能？请分别从检索和生成两个阶段提出评估指标，并说明工程上如何采集和计算这些指标",
+        "你在实际项目中如何利用 LLM-as-judge 自动评估大模型输出的质量？请详细描述你的评估流程、prompt 设计与一致性校验策略",
+        "在评估 Agent 时，你如何设计测试用例来衡量其工具调用准确性、计划合理性和恢复能力？",
+        "请描述一个你在 RAG 系统中跟踪和处理 bad case 的完整流程，从发现到定位根因再到修复验证",
+        "你如何设计一个针对模型幻觉（Hallucination）的离线评测方案？请详细说明数据集构建、评测指标和阈值设置"
+      ],
+      "keywords": [
+        "#HitRate #MRR #Faithfulness #RAGAS #eval_pipeline #LLM-as-judge",
+        "#LLMasJudge #eval_prompt #一致性校验 #校准 #自动化评测",
+        "#Agent评估 #tool_accuracy #轨迹匹配 #异常注入 #TaskSuccessRate",
+        "#bad_case #根因分析 #chunk策略 #回归测试 #trace",
+        "#幻觉评测 #Faithfulness #Hallucination率 #声明分解 #校准",
+        "#RAG",
+        "#离线评测",
+        "#指标",
+        "#LLMasJudge",
+        "#评测",
+        "#忠实度",
+        "#bad_case",
+        "#根因分析",
+        "#Agent评估",
+        "#轨迹",
+        "#任务成功率",
+        "#线上vs线下",
+        "#用户满意度",
+        "#LLMasJudge #偏见 #prompt设计 #校准 #对抗性测试"
+      ],
+      "tasks": [
+        "4.1 大模型理论追问题"
+      ]
     }
   ]
 }
