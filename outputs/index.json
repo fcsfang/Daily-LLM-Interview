@@ -571,6 +571,45 @@
       "tasks": [
         "4.1 大模型理论追问题"
       ]
+    },
+    {
+      "date": "2026-06-12",
+      "file": "2026-06-12.md",
+      "theme": "模型部署 / 推理优化",
+      "questions": [
+        "在部署大模型时，你如何理解并权衡“吞吐率（Throughput）”和“延迟（Latency）”？常用的优化手段有哪些（比如量化、KV Cache、Batching）？",
+        "大模型部署时，显存为什么会很快被占满？除了模型权重，还有什么？什么是 KV Cache？它是如何影响部署成本的？",
+        "请描述一个多 LoRA Adapter 部署方案。当有上千个不同业务线的 LoRA 权重需要同时服务时，你会如何设计？"
+      ],
+      "keywords": [
+        "#量化 #PagedAttention #ContinuousBatching #吞吐率 #延迟 #SLA #显存",
+        "#KV_Cache #显存分析 #MQA #GQA #PagedAttention #部署成本",
+        "#MultiLoRA #模型部署 #动态加载 #RayServe #LRU缓存 #热切换",
+        "#模型部署",
+        "#推理优化",
+        "#Batching",
+        "#吞吐率",
+        "#KV_Cache",
+        "#vLLM",
+        "#LoRA",
+        "#模型微调",
+        "#PEFT",
+        "#Attention",
+        "#FFN",
+        "#RAG",
+        "#模型评测",
+        "#忠实度",
+        "#Faithfulness",
+        "#LLMasJudge",
+        "#Agent",
+        "#ReAct",
+        "#推理",
+        "#工具调用",
+        "#LangGraph"
+      ],
+      "tasks": [
+        "4.1 大模型理论追问题：量化（INT8 vs FP16）对推理的数学依据和性能差异"
+      ]
     }
   ]
 }
