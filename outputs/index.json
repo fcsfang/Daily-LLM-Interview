@@ -704,6 +704,47 @@
       "tasks": [
         "4.1 大模型理论追问题"
       ]
+    },
+    {
+      "date": "2026-06-15",
+      "file": "2026-06-15.md",
+      "theme": "RAG",
+      "questions": [
+        "长文档切片（Chunking）时 chunk_size 怎么定？如何保证语义完整性？",
+        "RAG 中如何做稠密向量检索与稀疏向量检索的混合？RRF（Reciprocal Rank Fusion）的原理和优缺点？",
+        "Rerank（Cross-Encoder）解决了向量召回的什么问题？有哪些工程落地注意事项？"
+      ],
+      "keywords": [
+        "chunk_size",
+        "overlap",
+        "语义切分",
+        "token 限制",
+        "离线评测",
+        "混合检索",
+        "BM25",
+        "稠密向量",
+        "RRF",
+        "融合排序",
+        "延迟优化",
+        "Rerank",
+        "Cross-Encoder",
+        "Bi-Encoder",
+        "交互缺失",
+        "#RAG",
+        "#Rerank",
+        "#Cross-Encoder",
+        "#Chunking",
+        "#工程",
+        "#混合检索",
+        "#RRF",
+        "#幻觉控制",
+        "#在线监控",
+        "#评测",
+        "#回归测试"
+      ],
+      "tasks": [
+        "4.1 大模型理论追问题"
+      ]
     }
   ]
 }
