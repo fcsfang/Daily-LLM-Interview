@@ -834,6 +834,66 @@
       "tasks": [
         "4.1 大模型理论追问题"
       ]
+    },
+    {
+      "date": "2026-06-19",
+      "file": "2026-06-19.md",
+      "theme": "模型部署 / 推理优化",
+      "questions": [
+        "SGLang 和 vLLM 在推理加速上的核心区别是什么？各自有什么适用场景？",
+        "你在部署大模型推理服务时，如何系统性地优化吞吐和延迟？请从量化、KV Cache、Batching 三个维度展开",
+        "在推理部署中，LoRA 模型如何实现低成本、低延迟的切换？你了解哪些工程方案？",
+        "在 Agent 系统中，如何设计一个高吞吐、低延迟的工具调用（Tool Calling）链路？",
+        "在评估一个模型部署方案时，你会关注哪些指标？如何基于这些指标进行决策？"
+      ],
+      "keywords": [
+        "RadixAttention",
+        "PagedAttention",
+        "前缀复用",
+        "KV Cache 管理",
+        "框架选型",
+        "首 token 延迟",
+        "连续 batching",
+        "量化（W8A16/W4A16）",
+        "KV Cache 量化",
+        "吞吐 vs 延迟",
+        "Prefill vs Decode",
+        "vLLM continuous batching",
+        "LoRA 合并",
+        "动态注入",
+        "TensorRT-LLM",
+        "vLLM LoRA",
+        "per-request selector",
+        "切换延迟",
+        "Agent 调用优化",
+        "异步并行",
+        "工具缓存",
+        "流水线",
+        "小模型 fallback",
+        "P50/P99 延迟",
+        "TTFT",
+        "TPOT",
+        "QPS",
+        "显存评估",
+        "成本核算",
+        "吞吐拐点",
+        "A100 vs H100",
+        "#模型部署",
+        "#推理优化",
+        "#KV",
+        "#量化",
+        "#INT8",
+        "#W8A16",
+        "#PagedAttention",
+        "#RadixAttention",
+        "#Batching",
+        "#吞吐",
+        "#生产排查",
+        "#延迟"
+      ],
+      "tasks": [
+        "4.1 大模型理论追问题"
+      ]
     }
   ]
 }
