@@ -1247,6 +1247,63 @@
       "tasks": [
         "4.1 大模型理论追问题"
       ]
+    },
+    {
+      "date": "2026-06-29",
+      "file": "2026-06-29.md",
+      "theme": "RAG",
+      "questions": [
+        "如何设计 RAG 中的文档切片（Chunking）策略？chunk_size 怎么定？如何评估效果？",
+        "什么是 Rerank（重排序）？在工程中如何实现？它解决了什么问题？",
+        "如何评估 RAG 系统的检索和生成质量？具体用哪些指标？如何自动化计算？尤其是忠实度（Faithfulness）？",
+        "RAG 中的引用（Citation）机制如何设计？如何验证引用的准确性？",
+        "什么是 HyDE（假设文档嵌入）？它在零样本检索中起什么作用？"
+      ],
+      "keywords": [
+        "语义切块",
+        "chunk_size",
+        "overlap",
+        "Hit Rate",
+        "MRR",
+        "量化评估",
+        "Cross-Encoder",
+        "双阶段检索",
+        "粗排",
+        "精排",
+        "BGE-Reranker",
+        "延迟优化",
+        "Faithfulness",
+        "NLI 评估",
+        "RAGAS",
+        "LLM-as-judge",
+        "引用标记",
+        "后处理对齐",
+        "引用精准度",
+        "引用召回率",
+        "反幻觉",
+        "HyDE",
+        "假设文档嵌入",
+        "零样本",
+        "语义 gap",
+        "短 query 优化",
+        "#RAG",
+        "#Chunking",
+        "#HitRate",
+        "#Rerank",
+        "#CrossEncoder",
+        "#评测",
+        "#Faithfulness",
+        "#NLI",
+        "#引用",
+        "#Citation",
+        "#反幻觉",
+        "#HyDE",
+        "#零样本检索",
+        "#QueryRewrite"
+      ],
+      "tasks": [
+        "4.1 大模型理论追问题：HyDE 的局限性及工程适配"
+      ]
     }
   ]
 }
