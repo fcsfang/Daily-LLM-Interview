@@ -1366,6 +1366,39 @@
       "tasks": [
         "4.1 大模型理论追问题"
       ]
+    },
+    {
+      "date": "2026-07-02",
+      "file": "2026-07-02.md",
+      "theme": "模型评测",
+      "questions": [
+        "你如何评估一个RAG系统的生成质量？请从离线评测的角度完整说一下你的方案",
+        "什么是LLM-as-judge？它在模型评测中有什么局限性，你怎么校准？",
+        "你怎么分析RAG系统的bad case？给出一个你实际处理过的例子",
+        "在Agent评测中，你怎么评估Agent是否完成了它的任务？需要哪些指标？",
+        "离线评测中如何自动化计算忠实度（Faithfulness）？你遇到过哪些坑？"
+      ],
+      "keywords": [
+        "#评测集构造 #LLM-as-judge #忠实度 #RAGAS #HitRate #MRR",
+        "#LLM-as-judge #评测偏差 #校准 #Cohen’sKappa #自增强偏差",
+        "#BadCase分析 #排查漏斗 #LostInTheMiddle #Query改写 #Retrieval排查",
+        "#Agent评测 #TaskSuccessRate #工具调用准确率 #轨迹匹配 #鲁棒性评测",
+        "#Faithfulness #声明提取 #LLM-as-judge #RAGAS #忠实度",
+        "#评测",
+        "#RAG",
+        "#检索指标",
+        "#LLM-as-judge",
+        "#偏差",
+        "#离线",
+        "#在线",
+        "#Agent",
+        "#工具调用",
+        "#数据集",
+        "#覆盖度"
+      ],
+      "tasks": [
+        "4.1 大模型理论追问题"
+      ]
     }
   ]
 }
