@@ -1399,6 +1399,68 @@
       "tasks": [
         "4.1 大模型理论追问题"
       ]
+    },
+    {
+      "date": "2026-07-03",
+      "file": "2026-07-03.md",
+      "theme": "模型部署 / 推理优化",
+      "questions": [
+        "模型部署时，量化（Quantization）是怎么降低推理成本的？主流量化方案有哪些？如何选型？",
+        "请解释 KV Cache 在 LLM 推理中的作用，以及主流优化方案（如 MQA、GQA、PagedAttention）的原理",
+        "在模型部署中，如何优化吞吐量（Throughput）和延迟（Latency）？请谈谈动态 batching 和 continuous batching 的区别",
+        "模型部署中如何保证服务稳定性？请列举常见的故障排查手段",
+        "你如何在项目中选择 LLM 推理框架（如 vLLM、TGI、TensorRT-LLM）？它们的核心区别是什么？",
+        "量化为什么能降低推理延迟？",
+        "什么是 KV Cache 的 PagedAttention？",
+        "continuous batching 和 dynamic batching 有什么区别？",
+        "推理部署中监控哪些关键指标？",
+        "vLLM 相比 TGI 的核心优势是什么？"
+      ],
+      "keywords": [
+        "量化",
+        "INT4/INT8",
+        "PTQ",
+        "GPTQ",
+        "AWQ",
+        "推理加速",
+        "显存节省",
+        "KV Cache",
+        "MQA",
+        "GQA",
+        "PagedAttention",
+        "vLLM",
+        "显存优化",
+        "吞吐",
+        "延迟",
+        "动态 batching",
+        "continuous batching",
+        "GPU 利用率",
+        "服务稳定性",
+        "监控",
+        "限流熔断",
+        "容错",
+        "显存管理",
+        "热加载",
+        "TGI",
+        "TensorRT-LLM",
+        "推理框架",
+        "选型对比",
+        "吞吐延迟",
+        "#模型部署",
+        "#量化",
+        "#推理加速",
+        "#KV",
+        "#PagedAttention",
+        "#vLLM",
+        "#batching",
+        "#吞吐",
+        "#监控",
+        "#稳定性",
+        "#TGI"
+      ],
+      "tasks": [
+        "4.1 大模型理论追问题：连续 batching 中，如何解决不同请求序列长度不同导致的 GPU 计算碎片（padding 浪费）？"
+      ]
     }
   ]
 }
