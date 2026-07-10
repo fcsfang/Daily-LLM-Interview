@@ -1722,6 +1722,33 @@
       "tasks": [
         "4.1 大模型理论追问题"
       ]
+    },
+    {
+      "date": "2026-07-10",
+      "file": "2026-07-10.md",
+      "theme": "模型部署 / 推理优化",
+      "questions": [
+        "SGLang 的 RadixAttention 和 vLLM 的 PagedAttention 有什么区别？为什么 SGLang 能实现更高效的前缀复用？",
+        "你如何为一个模型做量化？量化到 4bit 或者 8bit 后，对推理的延迟和显存分别有什么影响？如果模型量化后精度下降，你会怎么排查和恢复？",
+        "为什么大模型推理时 KV cache 能大幅提升速度？它的内存占用怎么估算？如果序列特别长（比如 32K 上下文），KV cache 会变得多大，你怎么优化？"
+      ],
+      "keywords": [
+        "PagedAttention, RadixAttention, KV cache, Trie 树, 前缀共享, 显存碎片",
+        "GPTQ, AWQ, NF4, W4A16, 混合精度量化, 校准集",
+        "KV cache, 显存估算, GQA, MQA, PagedAttention, 窗口注意力",
+        "#模型部署",
+        "#推理优化",
+        "#batching",
+        "#prefill",
+        "#decode",
+        "#投机解码",
+        "#显存计算",
+        "#TP",
+        "#PP"
+      ],
+      "tasks": [
+        "4.1 大模型理论追问题"
+      ]
     }
   ]
 }
