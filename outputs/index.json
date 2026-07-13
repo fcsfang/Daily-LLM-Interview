@@ -1837,6 +1837,48 @@
       "tasks": [
         "4.1 大模型理论追问题"
       ]
+    },
+    {
+      "date": "2026-07-13",
+      "file": "2026-07-13.md",
+      "theme": "RAG",
+      "questions": [
+        "如何设计 RAG 中的 Chunk 策略？chunk_size 一般怎么定？不同文档类型（代码、表格、长文本）怎么处理？",
+        "为什么需要 Rerank？Cross-Encoder 相比向量召回有什么优势？工程上如何部署 Rerank？",
+        "在 RAG 系统中如何让模型输出带引用的答案？如何保证引用的准确性？",
+        "如何降低 RAG 系统中的幻觉？请列举几种方法"
+      ],
+      "keywords": [
+        "Chunk_size",
+        "overlap",
+        "RecursiveCharacterTextSplitter",
+        "语义切分",
+        "元数据",
+        "文档类型适配",
+        "Cross-Encoder",
+        "双塔交互缺失",
+        "精排",
+        "Batch 推理",
+        "降级策略",
+        "ColBERT",
+        "引用标注",
+        "Faithfulness",
+        "结构化输出",
+        "Self-RAG",
+        "LLM-as-Judge",
+        "忠实度检测",
+        "知识冲突仲裁",
+        "拒绝机制",
+        "NLI 验证",
+        "#RAG",
+        "#召回优化",
+        "#检索优化",
+        "#Rerank",
+        "#Chunk"
+      ],
+      "tasks": [
+        "4.1 大模型理论追问题"
+      ]
     }
   ]
 }
