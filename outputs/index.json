@@ -1879,6 +1879,37 @@
       "tasks": [
         "4.1 大模型理论追问题"
       ]
+    },
+    {
+      "date": "2026-07-14",
+      "file": "2026-07-14.md",
+      "theme": "Agent",
+      "questions": [
+        "ReAct、Plan-and-Execute、Reflection 三种 Agent 设计范式的核心区别是什么？实际项目中该如何选型？",
+        "请介绍一下 AI Agent 的记忆机制，并说明在实际开发中应该如何设计记忆模块？",
+        "在 Agent 中使用 LoRA 微调时，如何处理缺失或错误的 Action 文本？比如模型输出了不存在的函数名"
+      ],
+      "keywords": [
+        "#ReAct #Plan-and-Execute #Reflection #Agent设计范式 #选型",
+        "#Agent记忆 #短期记忆 #长期记忆 #记忆压缩 #Memory Summarization #向量检索",
+        "#LoRA #FunctionCalling #错误恢复 #数据增强 #工程校验 #容错机制",
+        "#Agent",
+        "#Memory",
+        "#工程实践",
+        "#错误恢复",
+        "#工具调用",
+        "#LoRA",
+        "#AdaLoRA",
+        "#参数高效微调",
+        "#评测",
+        "#指标",
+        "#手搓vs框架",
+        "#工程选型",
+        "#反思机制 #LLM-as-Judge #Agent #错误恢复 #分层校验"
+      ],
+      "tasks": [
+        "4.1 大模型理论追问题"
+      ]
     }
   ]
 }
