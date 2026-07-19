@@ -2084,6 +2084,57 @@
       "tasks": [
         "4.1 大模型理论追问题"
       ]
+    },
+    {
+      "date": "2026-07-19",
+      "file": "2026-07-19.md",
+      "theme": "综合复盘 / 模拟面试",
+      "questions": [
+        "请用2分钟介绍你的SELF-RAG报错自愈系统，并说明它相比传统RAG的核心优势",
+        "如何设计一个生产级的RAG系统？请从架构、检索、生成、评测、安全等角度展开",
+        "在Agent系统中，如何评估和保证模型调用的质量？特别是当Agent需要调用外部工具（如搜索、计算器）时，你怎么确保LLM输出的Action格式正确且不产生幻觉？",
+        "你如何衡量RAG系统的检索质量？除了检索端指标，生成端指标如何评估？请设计一个完整的评估方案",
+        "你如何在Agent中使用LoRA微调？当模型输出了不存在的Action时，如何通过微调来改进？"
+      ],
+      "keywords": [
+        "SELF-RAG",
+        "反思节点",
+        "LangGraph",
+        "五重幻觉防御",
+        "隐式幻觉",
+        "引用校验",
+        "混合检索",
+        "Cross-Encoder重排序",
+        "RRF",
+        "Faithfulness评测",
+        "输入输出Guardrails",
+        "Function Calling",
+        "结构化生成",
+        "ActionValidator",
+        "重试回退",
+        "状态快照",
+        "Recall@K",
+        "Faithfulness",
+        "RAGAS",
+        "端到端评估",
+        "线上监控",
+        "坏例归因",
+        "Agent微调",
+        "LoRA rank",
+        "工具调用准确率",
+        "负样本训练",
+        "catastrophic forgetting",
+        "#RAG",
+        "#评测",
+        "#Agent",
+        "#幻觉",
+        "#LangGraph",
+        "#LoRA",
+        "#工程实践"
+      ],
+      "tasks": [
+        "4.1 大模型理论追问题"
+      ]
     }
   ]
 }
