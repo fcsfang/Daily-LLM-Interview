@@ -2135,6 +2135,36 @@
       "tasks": [
         "4.1 大模型理论追问题"
       ]
+    },
+    {
+      "date": "2026-07-20",
+      "file": "2026-07-20.md",
+      "theme": "RAG",
+      "questions": [
+        "在 RAG 系统中，如何确定 chunk_size？你做过哪些实验或有哪些经验方法？",
+        "RAG 知识库的增量更新（upsert）在工程上如何实现？如何处理删除残留和版本一致性问题？",
+        "在 RAG 中，即使检索到了正确的上下文，模型仍然可能生成与上下文矛盾的答案。你如何诊断和修复这种 faithfulness 问题？"
+      ],
+      "keywords": [
+        "chunk_size, semantic chunking, 边界 overlap, Recall@K, Faithfulness, A/B 实验",
+        "增量更新, upsert, 删除残留, 版本一致性, 软删除, 影子库",
+        "faithfulness, NLI, 后处理校验, 隐式幻觉, Prompt 约束, Bad Case 回归",
+        "#RAG",
+        "#Rerank",
+        "#Cross-Encoder",
+        "#引用",
+        "#幻觉控制",
+        "#LostInTheMiddle",
+        "#上下文",
+        "#评测",
+        "#Faithfulness",
+        "#AnswerRelevancy",
+        "#知识库",
+        "#增量更新"
+      ],
+      "tasks": [
+        "4.1 大模型理论追问题"
+      ]
     }
   ]
 }
