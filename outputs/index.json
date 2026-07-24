@@ -2305,6 +2305,42 @@
       "tasks": [
         "4.1 大模型理论追问题：对比传统基于规则的评测与基于 LLM 的评测在 Agent 场景下的优劣"
       ]
+    },
+    {
+      "date": "2026-07-24",
+      "file": "2026-07-24.md",
+      "theme": "模型部署 / 推理优化",
+      "questions": [
+        "KV cache 是什么？为什么能加速推理？在部署时如何管理 KV cache 的内存？",
+        "你了解哪些模型量化方法？在部署时如何选择量化方案来平衡吞吐、延迟和精度？",
+        "在生产环境部署 LLM 推理服务时，如何平衡吞吐（throughput）和延迟（latency）？有哪些常用优化手段？",
+        "KV cache 为什么能加速推理？它存在什么局限？",
+        "NF4 量化相比 INT8 有什么优势和劣势？",
+        "连续 batching（continuous batching）是怎么工作的？",
+        "部署 LLM 服务时如何降低首 token 延迟？",
+        "什么是 PagedAttention？它解决了什么问题？"
+      ],
+      "keywords": [
+        "#KV cache #自回归 #显存管理 #PagedAttention #前缀缓存 #部署优化",
+        "#量化 #NF4 #QLoRA #部署权衡 #精度损失 #吞吐延迟",
+        "#吞吐 #延迟 #动态batching #连续batching #SLA #前缀缓存",
+        "#模型部署",
+        "#推理优化",
+        "#KV",
+        "#量化",
+        "#NF4",
+        "#QLoRA",
+        "#batching",
+        "#吞吐",
+        "#首token延迟",
+        "#前缀缓存",
+        "#PagedAttention",
+        "#显存管理",
+        "#vLLM"
+      ],
+      "tasks": [
+        "4.1 大模型理论追问题"
+      ]
     }
   ]
 }
