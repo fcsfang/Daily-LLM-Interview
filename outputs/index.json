@@ -2382,6 +2382,45 @@
       "tasks": [
         "4.1 大模型理论追问题"
       ]
+    },
+    {
+      "date": "2026-07-26",
+      "file": "2026-07-26.md",
+      "theme": "综合复盘 / 模拟面试",
+      "questions": [
+        "如何设计一个RAG系统的评测方案？请从检索端和生成端分别说明指标和评测方法",
+        "如何测试一个AI Agent在调用多个工具时的行为？请从工具选择、错误处理、记忆三个方面描述测试方案",
+        "为什么选择LangGraph而不是LangChain Chain来构建复杂的Agent工作流？它在你的项目中有哪些不可替代性？",
+        "在生产环境中部署LLM推理服务时，如何降低首token延迟（TTFT）？你有哪些工程实践？",
+        "对比ReAct和Plan-and-Execute两种Agent设计模式，你如何选择？各自的优缺点是什么？"
+      ],
+      "keywords": [
+        "#RAG评测 #ContextRecall #ContextPrecision #Faithfulness #AnswerRelevancy #RAGAS",
+        "#Agent测试 #工具选择 #错误处理 #Memory验证 #LangSmith #回归测试",
+        "#LangGraph #LangChain #Agent框架 #状态管理 #条件循环 #SELF-RAG",
+        "#TTFT #首token延迟 #KVcache #前缀缓存 #vLLM #推理优化",
+        "#ReAct #Plan-and-Execute #Agent设计模式 #动态规划 #流程编排",
+        "#RAG",
+        "#排查",
+        "#trace",
+        "#Agent",
+        "#SystemPrompt",
+        "#Prompt工程",
+        "#模型部署",
+        "#vLLM",
+        "#PagedAttention",
+        "#KVcache",
+        "#LoRA",
+        "#微调",
+        "#TargetModules",
+        "#Memory",
+        "#短期",
+        "#长期",
+        "#隔离"
+      ],
+      "tasks": [
+        "4.1 大模型理论追问题：在RAG系统中，幻觉可能出现于哪些环节？如何从检索、生成、后处理三个环节分别系统性地缓解？"
+      ]
     }
   ]
 }
