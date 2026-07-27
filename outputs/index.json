@@ -2421,6 +2421,49 @@
       "tasks": [
         "4.1 大模型理论追问题：在RAG系统中，幻觉可能出现于哪些环节？如何从检索、生成、后处理三个环节分别系统性地缓解？"
       ]
+    },
+    {
+      "date": "2026-07-27",
+      "file": "2026-07-27.md",
+      "theme": "RAG",
+      "questions": [
+        "在 RAG 系统中，你如何设计 chunk 切分策略？会考虑哪些因素？又如何验证 chunk 质量？",
+        "如何诊断 RAG 系统的失败是检索端问题还是生成端问题？你会用哪些方法做系统性排查？",
+        "RAG 系统如何设计引用（Citation）机制？如何确保引用准确且可验证？"
+      ],
+      "keywords": [
+        "chunk 策略",
+        "递归分割",
+        "overlap",
+        "元数据",
+        "Recall@k",
+        "语义完整性",
+        "分模块诊断",
+        "Retrieval Hit Rate",
+        "Faithfulness",
+        "Trace",
+        "Ablation Test",
+        "Bad Case 闭环",
+        "引用格式",
+        "归因准确性",
+        "后处理验证",
+        "LLM-as-Judge",
+        "引用覆盖率",
+        "#RAG",
+        "#Chunk",
+        "#LostInTheMiddle",
+        "#上下文优化",
+        "#引用验证",
+        "#LLM-as-Judge",
+        "#检索优化",
+        "#召回率",
+        "#评测",
+        "#Faithfulness",
+        "#AnswerRelevancy"
+      ],
+      "tasks": [
+        "4.1 大模型理论追问题"
+      ]
     }
   ]
 }
