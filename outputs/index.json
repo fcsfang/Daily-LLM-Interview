@@ -2464,6 +2464,43 @@
       "tasks": [
         "4.1 大模型理论追问题"
       ]
+    },
+    {
+      "date": "2026-07-28",
+      "file": "2026-07-28.md",
+      "theme": "Agent",
+      "questions": [
+        "你在 Agent 中如何设计长短期记忆？当新抽取的记忆与旧记忆发生冲突时，你是如何裁决的？（如用户更改了偏好）",
+        "Agent 的 Tool Calling 存在‘过度调用’或‘错误调用’的问题，你有什么工程经验来缓解这个问题？",
+        "请对比 ReAct 和 Plan-and-Execute 两种 Agent 设计模式，在复杂任务和错误恢复上有何不同？",
+        "如何防止 Agent 短期记忆互相污染？",
+        "在 Agent 中，Plan-and-Execute 遇到步骤执行失败，如何设计错误恢复？",
+        "什么是 Rerank 在 RAG 中的作用？为什么它是必要的？",
+        "模型部署时，vLLM 的 PagedAttention 和 SGLang 的 RadixAttention 核心区别是什么？",
+        "在海量文档 RAG 中，如何处理“Lost in the Middle”问题？"
+      ],
+      "keywords": [
+        "#Agent记忆 #长短期记忆 #冲突仲裁 #时间戳 #置信度 #结构化条目",
+        "#ToolCalling #反思机制 #Prompt约束 #参数校验 #结构化输出",
+        "#ReAct #Plan-and-Execute #规划 #执行 #错误恢复 #任务分解",
+        "#Agent",
+        "#Memory",
+        "#状态管理",
+        "#Plan-and-Execute",
+        "#错误恢复",
+        "#RAG",
+        "#Rerank",
+        "#检索优化",
+        "#模型部署",
+        "#vLLM",
+        "#SGLang",
+        "#推理优化",
+        "#LostInTheMiddle",
+        "#上下文优化"
+      ],
+      "tasks": [
+        "4.1 大模型理论追问题"
+      ]
     }
   ]
 }
