@@ -1,49 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-05-29",
-      "file": "2026-05-29.md",
-      "theme": "模型部署 / 推理优化",
-      "questions": [
-        "请详细解释 KV cache 是什么？为什么能极大提升推理速度？实际部署中显存如何估算？",
-        "如果对模型进行 INT4 量化后，发现回答质量明显下降，你会如何做精度补偿？",
-        "在高并发推理服务中，如何优化系统的吞吐和延迟？请谈谈 dynamic batching、Continuous batching 和 PagedAttention 的原理"
-      ],
-      "keywords": [
-        "KV cache",
-        "自回归",
-        "显存计算",
-        "GQA",
-        "PagedAttention",
-        "vLLM",
-        "FlashAttention",
-        "INT4",
-        "AWQ",
-        "GPTQ",
-        "QLoRA",
-        "NF4",
-        "混合精度量化",
-        "SmoothQuant",
-        "Dynamic batching",
-        "Continuous batching",
-        "吞吐",
-        "延迟",
-        "显存碎片",
-        "#模型部署",
-        "#推理优化",
-        "#LoRA",
-        "#量化",
-        "#QLoRA",
-        "#吞吐",
-        "#精度补偿",
-        "#vLLM",
-        "#PagedAttention"
-      ],
-      "tasks": [
-        "4.1 大模型理论追问题"
-      ]
-    },
-    {
       "date": "2026-05-30",
       "file": "2026-05-30.md",
       "theme": "LLM 应用工程",
@@ -2547,6 +2504,53 @@
         "#过拟合",
         "#模型评估",
         "#验证Loss"
+      ],
+      "tasks": [
+        "4.1 大模型理论追问题"
+      ]
+    },
+    {
+      "date": "2026-07-30",
+      "file": "2026-07-30.md",
+      "theme": "模型评测",
+      "questions": [
+        "在 RAG 系统中，你如何设计一个系统的 Bad Case 分析流程？当发现模型输出与检索到的文档内容不一致时，你如何定位是检索失败还是生成失败？",
+        "你了解 LLM-as-Judge 这种评测方法吗？在 Agent 场景下使用它有什么局限性？如何缓解？",
+        "对于 AI Agent，你如何做离线评测？请列举你关注的核心指标和评测方法",
+        "请介绍 RAG 系统的离线评测指标，重点说明 Faithfulness（忠实度）和 Context Precision（上下文精准率）的含义和计算方法",
+        "如何离线评测一个 LoRA 微调模型的性能？你不仅要关注整体指标，还要关注什么？"
+      ],
+      "keywords": [
+        "Bad Case 分级",
+        "检索 vs 生成归因",
+        "chunk 切分",
+        "faithfulness 检查",
+        "LLM-as-Judge",
+        "位置偏差",
+        "长度偏差",
+        "多投票",
+        "Rubric 设计",
+        "Agent 离线评测",
+        "任务成功率",
+        "工具调用准确率",
+        "步骤计数",
+        "死循环检测",
+        "Faithfulness",
+        "Context Precision",
+        "Ragas",
+        "claim 拆分",
+        "检索与生成解耦",
+        "LoRA 评测",
+        "过拟合检测",
+        "灾难性遗忘",
+        "分布外泛化",
+        "#评测",
+        "#LLM-as-Judge",
+        "#RAG",
+        "#Agent",
+        "#BadCase分析",
+        "#LoRA",
+        "#微调"
       ],
       "tasks": [
         "4.1 大模型理论追问题"
